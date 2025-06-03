@@ -2,11 +2,12 @@ import timeit
 import random
 
 arr1 = [5, 2, 9, 1, 5, 6]
-arr2 = random.sample(range(1, 100000), 10000)
+arr2 = random.sample(range(1, 100000), 1000)
 'sorts'
 
 'insertionSort'
-def insertion_sort(arr):
+def insertion_sort(arr_):
+    arr = arr_.copy()
     for i in range(1, len(arr)):
         key = arr[i]
         j = i-1
